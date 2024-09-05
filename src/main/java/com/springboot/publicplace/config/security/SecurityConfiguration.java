@@ -17,6 +17,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+<<<<<<< Updated upstream
+=======
+
+import java.util.Arrays;
+>>>>>>> Stashed changes
 
 @Configuration
 @EnableWebSecurity
@@ -31,10 +36,15 @@ public class SecurityConfiguration {
     @Bean
     protected SecurityFilterChain configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.httpBasic().disable() // REST API는 UI를 사용하지 않으므로 기본설정을 비활성화
+<<<<<<< Updated upstream
 
                 .cors()
                 .and()
                 .httpBasic().disable()
+=======
+                .cors().configurationSource(corsConfigurationSource())
+                .and()
+>>>>>>> Stashed changes
                 .csrf().disable() // REST API는 csrf 보안이 필요 없으므로 비활성화
 
                 .sessionManagement()
@@ -79,6 +89,7 @@ public class SecurityConfiguration {
                 "/kakao/**",
                 "/kakao_login_large_narrow.png");
     }
+<<<<<<< Updated upstream
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
@@ -90,6 +101,20 @@ public class SecurityConfiguration {
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
+=======
+    //CORS 설정
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration config = new CorsConfiguration();
+
+        config.setAllowCredentials(true);
+        config.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+        config.setAllowedMethods(Arrays.asList("HEAD","POST","GET","DELETE","PUT"));
+        config.setAllowedHeaders(Arrays.asList("*"));
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+>>>>>>> Stashed changes
         return source;
     }
 }
