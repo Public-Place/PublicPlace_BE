@@ -134,7 +134,7 @@ public class PostServiceImpl implements PostService {
         return resultDto;
     }
 
-    public List<PostListResponseDto> getPostsByCategory(String category, int page, String sortBy, String title) {
+    public List<PostListResponseDto> getPostsByCategory(String category, int page, String sortBy) {
 
         Sort sort;
         if(sortBy.equals("views")){
@@ -147,16 +147,7 @@ public class PostServiceImpl implements PostService {
         Pageable pageable = PageRequest.of(page,10, sort);
         Page<Post> posts;
 
-        // title이 비어있지 않은 경우 제목으로 검색
-        if (title != null && !title.isEmpty()) {
-            if ("전체".equals(category)) {
-                // 카테고리가 전체일 경우 모든 카테고리에서 제목으로 검색
-                posts = postRepository.findByTitleContaining(title, pageable);
-            } else {
-                // 특정 카테고리에서 제목으로 검색
-                posts = postRepository.findByTitleContainingAndCategory(title, category, pageable);
-            }
-        } else if ("전체".equals(category)) {
+        if ("전체".equals(category)) {
             posts = postRepository.findAll(pageable);
         } else {
             posts = postRepository.findByCategory(category, pageable);
