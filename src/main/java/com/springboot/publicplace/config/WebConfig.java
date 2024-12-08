@@ -9,15 +9,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins(
-                        "http://localhost:3000",
-                        "http://3.36.221.111:3000",
-                        "http://3.36.221.111",
-                        "http://publicplace.site:3000", // 새 도메인 추가
-                        "http://publicplace.site"
-                )
+                .allowedOrigins("*")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true);
+                .allowCredentials(false);
     }
 }
