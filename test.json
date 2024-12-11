@@ -1,57 +1,69 @@
 {
-  "city" : {
-    "name" : "부산",
-    "country" : "대한민국"
-  },
   "plans" : [ {
-    "time" : "오전 10:00",
-    "title" : "부산역 도착",
-    "place" : "부산역",
-    "mapPlace" : "부산역",
-    "memo" : "일정 시작~",
+    "id" : 1,
+    "time" : "오후 1:00",
+    "title" : "공항 도착",
+    "place" : "후쿠오카 국제 공항",
+    "mapPlace" : "3 Chome-2-19 Tenjin, Chuo Ward, Fukuoka, 810-0001",
+    "memo" : "4번 출구로 나간 후 셔틀버스 탑승",
     "isDone" : false,
-    "puzzles" : [ ],
-    "AI" : false,
-    "feedback" : "추가 일정을 추천하지 않습니다."
-  }, {
-    "time" : "오후 12:00",
-    "title" : "부산 국제시장",
-    "place" : "부산 국제시장",
-    "mapPlace" : "부산광역시 중구 부평동1가 25-7",
-    "memo" : "부산의 전통 시장으로 신선한 해산물과 다양한 먹거리를 즐길 수 있습니다.",
-    "isDone" : false,
-    "puzzles" : [ ],
+    "puzzle" : { },
     "AI" : true,
-    "feedback" : "부산 국제시장은 지역 특산물과 다양한 음식을 경험할 수 있어 추천합니다."
+    "feedback" : "후쿠오카 공항은 입국 수속이 비교적 빠르지만, 셔틀버스를 놓치지 않도록 시간 확인을 권장합니다."
   }, {
+    "id" : 2,
     "time" : "오후 3:00",
-    "title" : "태종대",
-    "place" : "태종대",
-    "mapPlace" : "부산광역시 영도구 동삼동 산7-1",
-    "memo" : "일본 강점기에 지어진 조선 시대의 유적지로 국내외 관광객들이 찾는 명소입니다.",
+    "title" : "호텔 체크인",
+    "place" : "그랜드 호텔",
+    "mapPlace" : "4 Chome-2-1 Hakata, Fukuoka",
+    "memo" : "체크인 후 짐 정리",
     "isDone" : false,
-    "puzzles" : [ ],
-    "AI" : true,
-    "feedback" : "태종대는 역사적인 가치와 아름다운 경치를 감상할 수 있는 곳으로 추천합니다."
+    "puzzle" : { },
+    "AI" : false,
+    "feedback" : ""
   }, {
-    "time" : "오후 5:00",
-    "title" : "해운대 해변",
-    "place" : "해운대 해변",
-    "mapPlace" : "부산광역시 해운대구 우동 38-31",
-    "memo" : "한국을 대표하는 해수욕장으로 탁 트인 해변과 다양한 레스토랑이 있습니다.",
+    "id" : 3,
+    "time" : "오후 3:30",
+    "title" : "점심 식사",
+    "place" : "신신라멘 본점",
+    "mapPlace" : "3-2-19 Tenjin, Chuo Ward, Fukuoka, 810-0001",
+    "memo" : "텐진 지하가 근처, 진한 돼지뼈 육수로 유명",
     "isDone" : false,
-    "puzzles" : [ ],
+    "puzzle" : { },
     "AI" : true,
-    "feedback" : "해운대 해변은 아름다운 풍경과 여유를 느낄 수 있는 곳으로 추천합니다."
+    "feedback" : "이치란 라멘은 혼잡할 가능성이 높아 텐진 근처의 신신라멘 본점을 추천합니다. 텐진 지하가와 가까워 이동이 편리합니다."
   }, {
-    "time" : "저녁 7:00",
-    "title" : "부산 광안리 해변",
-    "place" : "부산 광안리 해변",
-    "mapPlace" : "부산광역시 수영구 광안동 201-6",
-    "memo" : "야경이 아름다운 해변으로 로맨틱한 분위기를 느낄 수 있습니다.",
+    "id" : 4,
+    "time" : "오후 4:30",
+    "title" : "지하 쇼핑 센터 구경",
+    "place" : "텐진 지하가",
+    "mapPlace" : "〒810-0001 Fukuoka, Chuo Ward, Tenjin, 2 Chome, 地下1・2・3号",
+    "memo" : "모든 구간 와이파이 무료 이용 가능",
     "isDone" : false,
-    "puzzles" : [ ],
+    "puzzle" : { },
+    "AI" : false,
+    "feedback" : ""
+  }, {
+    "id" : 5,
+    "time" : "오후 6:00",
+    "title" : "후쿠오카 기념품 구매",
+    "place" : "돈키호테 본점",
+    "mapPlace" : "1 Chome-20-17 Imaizumi, Chuo Ward, Fukuoka, 810-0021",
+    "memo" : "카드 결제 가능 / 카카오페이 가능",
+    "isDone" : false,
+    "puzzle" : { },
     "AI" : true,
-    "feedback" : "부산 광안리 해변은 밤에 멋진 야경을 감상할 수 있는 로맨틱한 장소로 추천합니다."
+    "feedback" : "돈키호테는 기념품부터 생필품까지 다양한 품목을 취급합니다. 시간을 조금 늦춰 여유롭게 쇼핑하는 것을 추천합니다."
+  }, {
+    "id" : 6,
+    "time" : "오후 8:00",
+    "title" : "저녁 맥주 한잔",
+    "place" : "야마카타야 맥주집",
+    "mapPlace" : "3-2-1 Tenjin, Chuo Ward, Fukuoka, 810-0001",
+    "memo" : "텐진 중심가 근처, 현지 맥주와 야키토리 추천",
+    "isDone" : false,
+    "puzzle" : { },
+    "AI" : true,
+    "feedback" : "현지 분위기를 즐기기에 좋은 장소로, 일본 특유의 다양한 맥주와 안주를 맛볼 수 있습니다. 텐진 쇼핑 후 들르기에 적합합니다."
   } ]
 }
