@@ -28,7 +28,7 @@
 - **IDE**: IntelliJ  
 - **Database**: MariaDB  
 - **Framework**: Spring Boot  
-- **Build Tool**: Maven  
+- **Build Tool**: Gradle  
 
 ### 협업 툴 :
 
