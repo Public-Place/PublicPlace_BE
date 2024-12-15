@@ -46,7 +46,7 @@ public class SecurityConfiguration {
                 .antMatchers("/sign-api/sign-in", "/sign-api/sign-up",("/kakao/callback"),
                         "/sign-api/exception", "/api/files/**","/api/v1/chat/**","/auth/refresh",
                         "/api/v1/feedback").permitAll() // 가입 및 로그인 주소는 허용
-                .antMatchers(HttpMethod.GET, "/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/v1/**").permitAll()
 
                 .antMatchers("**exception**").permitAll()
 
